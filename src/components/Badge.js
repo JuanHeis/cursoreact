@@ -3,6 +3,7 @@ import logoConf from '../img/badge-header.svg'
 import '../styles/styles.css'
 class Badge extends React.Component{
 
+
     render(){
        return(
            <div className="Badge">
@@ -12,7 +13,7 @@ class Badge extends React.Component{
                <div className="Badge__section-name">
                    <img className="Badge__avatar" src="" alt="Logo user"></img>
                    <h1>
-                       Juan <br></br>H
+                       {this.props.firstName} <br></br>{this.props.lastName}
                    </h1>
                </div>
                <div className='Badge__section-info'>

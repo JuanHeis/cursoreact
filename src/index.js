@@ -10,4 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import Badge from './components/Badge'
 const container = document.getElementById('app')
-reactDOM.render(<Badge></Badge>, container)
+reactDOM.render(<Badge 
+    lastName='kiko'
+    firstName='Juan'
+    ></Badge>, container)
