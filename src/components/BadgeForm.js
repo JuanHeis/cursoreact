@@ -1,14 +1,6 @@
 import React from 'react'
 
 class BadgeForm extends React.Component {
-    state = {
-        firstName:"",
-        lastName:"",
-        email:"",
-        twitter:"",
-        jobTitle:""
-    }
-
     handleClick = e => {
         e.preventDefault()
         console.log('Hola!')
@@ -24,6 +16,7 @@ class BadgeForm extends React.Component {
                         <input name='firstName'
                             id='firstName'
                             onChange={this.props.onChange}
+                            value={this.props.formValues.firstName}
                             className='form-control'
                             >
                             
@@ -34,7 +27,7 @@ class BadgeForm extends React.Component {
                             id='lastName'
                             onChange={this.props.onChange}
                             className='form-control'
-                            
+                            value={this.props.formValues.lastName}
                             >
                         </input>
 
@@ -44,6 +37,7 @@ class BadgeForm extends React.Component {
                             type='email'
                             onChange={this.props.onChange}
                             className='form-control'
+                            value={this.props.formValues.email}
                             >
                         </input>
                         
@@ -52,6 +46,7 @@ class BadgeForm extends React.Component {
                             id='jobTitle'
                             onChange={this.props.onChange}
                             className='form-control'
+                            value={this.props.formValues.jobTitle}
                             >
                         </input>
 
@@ -61,7 +56,7 @@ class BadgeForm extends React.Component {
                             id='twitter'
                             onChange={this.props.onChange}
                             className='form-control'
->
+                            value={this.props.formValues.twitter}>   
                         </input>
                         <button onClick={this.handleClick} className='btn btn-primary'>Save!</button>
                     </div>

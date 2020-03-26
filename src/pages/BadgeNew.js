@@ -7,15 +7,23 @@ import '../styles/styles.css'
 
 class BadgeNew extends React.Component {
     state={
-        form:{}
+        form:{
+            firstName:"",
+            lastName:'',
+            jobTitle:'',
+            twitter:'',
+            email:''
+        }
     }
 
     handleChange = e => {
-        // const nextForm = this.state.form
-        // nextForm[e.target.name] = e.target.value
+        console.log("pase por aca we", this.state)
+        const nextForm = this.state.form
+        nextForm[e.target.name] = e.target.value
         this.setState({
-            ...this.state.form, [e.target.name] : e.target.value
+            form: nextForm
         })
+
     }
     render() {
         return (
@@ -28,15 +36,12 @@ class BadgeNew extends React.Component {
                 <div className='contaiener'>
                     <div className='row'>
                         <div className='col-6'>
-                            <Badge firstName='Juan'
-                                    lastName='H'
-                                    twitter='juani'
-                                    jobTitle='Programmer'
-                                    avatarUrl=''>        
+                            <Badge formValue={this.state.form}>
+
                             </Badge>
                         </div>
                         <div className='col-6'>
-                            <BadgeForm onChange={this.handleChange}></BadgeForm>
+                            <BadgeForm onChange={this.handleChange} formValues={this.state.form}></BadgeForm>
                         </div>
                     </div>
 
