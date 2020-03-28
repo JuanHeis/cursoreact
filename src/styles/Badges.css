@@ -27,4 +27,21 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 1rem;
+    color: #98CA3F;
+  }
+
+  .linkButton{
+    background-color: #98CA3F;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 3px solid #4c651f;
+    color: white;
+  }
+  .homeh1{
+    color: white;
+  }
+  .spanHome{
+    color: white;
   }
