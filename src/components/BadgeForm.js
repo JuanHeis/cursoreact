@@ -10,7 +10,8 @@ class BadgeForm extends React.Component {
         return (
             <div>
                 <h1> New attendet</h1>
-                <form>
+                <form 
+                onSubmit={this.props.onSubmit}>
                     <div className='form-group'>
                         <label>First Name</label>
                         <input name='firstName'
@@ -58,7 +59,11 @@ class BadgeForm extends React.Component {
                             className='form-control'
                             value={this.props.formValues.twitter}>   
                         </input>
-                        <button onClick={this.handleClick} className='btn btn-primary'>Save!</button>
+                        <button className='btn btn-primary'>Save!</button>
+                        {(this.props.error)?
+                        <p>Ocurrio un error</p>
+                        :<p></p>
+                        }
                     </div>
                 </form>
             </div>

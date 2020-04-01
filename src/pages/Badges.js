@@ -7,6 +7,8 @@ import '../styles/Badges.css'
 import api from '../api'
 import BadgesList from '../components/BadgesList'
 import { Link } from 'react-router-dom'
+import PageLoading from '../components/PageLoading'
+import PageError from '../components/PageError'
 class Badges extends React.Component {
     state = {
         loading: true,
@@ -29,10 +31,10 @@ class Badges extends React.Component {
     }
     render() {
         if(this.state.loading === true){
-            return 'loading...'
+            return <PageLoading></PageLoading>
         }
         if (this.state.error){
-            return 'Hubo un error we, tene cuidado. '+this.state.error
+            return <PageError></PageError>
         }
         return (
             <React.Fragment>
