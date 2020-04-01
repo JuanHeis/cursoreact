@@ -3,6 +3,9 @@ import Badges from '../pages/Badges'
 
 class BadgesList extends React.Component {
     render() {
+        if (this.props.badges.length === 0){
+            return 'ta vacio we'
+        }
         return (
             <ul className='list-unstyled'>
                 {this.props.badges.map(badge => {
